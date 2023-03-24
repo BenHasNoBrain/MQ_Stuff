@@ -11,22 +11,46 @@ public class Week4	{
 			BufferedReader brout = new BufferedReader(new InputStreamReader(System.in));
 
 			String str = "";
+			String res = "";
+			int steps = 0;
+			Boolean helo = false;
+			Boolean auth = false;
 
-			str = "HELO\n";
-			dout.write(("HELO\n").getBytes());
-			dout.flush();
 
-			
 
 			while(!str.equals("stop"))	{
-				System.out.println(brin.readLine());
-				str = brout.readLine();
+				switch (steps)	{
+					case -1:
+						res = brin.readLine();
+						System.out.println(res);
+						if (res.equals("QUIT"))	{
+							str = "stop";
+							System.out.println("Quitting");
+						} else {
+							str = brout.readLine() + "\n";
+							dout.write(str.getBytes());
+							dout.flush();
+						}
 
-				dout.write((str + "\n").getBytes());
-				dout.flush();
+						break;
+					case 0:
+						System.out.println("Sending HELO");
+						str = "HELO\n";
+						dout.write(("HELO\n").getBytes());
+						dout.flush();
+						steps = 1;
+						helo = true;
+						break;
+					case 1:
+						System.out.println("Manually send AUTH and u/n");
+						auth = true;
+						steps = -1;
+						break;
+					default: 
+						break;
+				}
+				
 			}
-
-
 		} catch (Exception e)	{
 			System.out.println(e);
 		}
