@@ -19,3 +19,5 @@ Week 4 (13/3)
 
 Assignment1 (27/3/23)
 	Starting work on Assignment 1
+
+	Added branch version1: This is the assignment version before changing around the LRR algorithm, is just the starting point for being able to connect with the ds-server
