@@ -1,0 +1,7 @@
+#!/bin/bash
+
+./ds-server -v all -c ../../configs/sample-configs/ds-sample-config01.xml -n
+./ds-server -v all -c ../../configs/sample-configs/ds-sample-config02.xml -n
+./ds-server -v all -c ../../configs/sample-configs/ds-sample-config03.xml -n
+./ds-server -v all -c ../../configs/sample-configs/ds-sample-config04.xml -n
+./ds-server -v all -c ../../configs/sample-configs/ds-sample-config05.xml -n

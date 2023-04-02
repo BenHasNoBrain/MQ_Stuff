@@ -17,5 +17,11 @@ Week 3 (6/3)
 Week 4 (13/3)
 	Making a client to interact with ds-client
 
+Week 5 (20/3)
+	Absent from weekly tut
+
 Assignment1 (27/3/23)
 	Starting work on Assignment 1
+
+3/4/23
+	Rearranged file structure of repo
