@@ -13,7 +13,7 @@ public class A1 {
 	public static String res;
 	public static ArrayList<String> largeList = new ArrayList<String>();
 	public static int jobCount = 0;
-	public static int totalRecs;	
+	public static int totalRecs;
 	public static int totalLargest;
 
 	public static void main(String[] args) throws Exception	{
@@ -60,9 +60,9 @@ public class A1 {
 
 			/*-------------Get largest available core--------*/
 			//JOBN = submitTime jobID runtime core mem disk
-			//curr largest = type ID state curStartTime core mem disk
-			res = brin.readLine(); 
-			String[] curr = getLargest(jobn[4], jobn[5], jobn[6]);
+			//GETS data = type ID state curStartTime core mem disk
+			res = brin.readLine();
+			getLargest();
 			// # of largest systems stored in "totalLargest" variable
 			/*-----------------------------------------------*/
 
@@ -87,9 +87,9 @@ public class A1 {
 			res = brin.readLine();
 
 			/*-------------------------------------------------------------*/
- 
- 			
-				
+
+
+
 
 
 		} catch(Exception e)	{
@@ -107,16 +107,16 @@ public class A1 {
 		}
 	}
 
-	static String[] getLargest(String cores, String mem, String disk) throws Exception	{
+	static void  getLargest() throws Exception	{
 		try	{
-			str = "GETS Capable " + cores + " " + mem + " " + disk;
+			str = "GETS All";
 			doSend();
-			String largest = "";
 			res = brin.readLine();
 			totalRecs = Integer.valueOf(res.split(" ")[1]); //DATA x y
 			str = "OK"; doSend();
 
 			//Find largest core
+			String largest = "";
 			int noCores = 0;
 			String[] totalList = new String[totalRecs];
 			for (int i = 0; i < totalRecs; i++)	{
@@ -137,14 +137,12 @@ public class A1 {
 			}
 			totalLargest = largeList.size();
 
-			
+
 			str = "OK"; doSend();
 			brin.readLine();
-			return largest.split(" ");
 		} catch (Exception e)	{
 			System.out.println(e);
 		}
-		return null;
 	}
 
 	static void prepNext() throws Exception	{
