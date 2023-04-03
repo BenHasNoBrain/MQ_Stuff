@@ -1,4 +1,4 @@
-##Usage
+## Usage
 
 1. Clone this repository
 2. Start `ds-server` using `./ds-server -n -c <config file here> -v brief'`

@@ -1,10 +1,10 @@
-#COMP3100 README.md
+# COMP3100 README.md
 
 Benjamin Yee's Git repo, storing all the stuff learnt in COMP3100.
 
 ---
 
-##LOG:
+## LOG:
 - Week 1 (20/2): 
 	- LaTeX sample docs
 
@@ -28,5 +28,5 @@ Benjamin Yee's Git repo, storing all the stuff learnt in COMP3100.
 
 ---
 
-##Assignment Stage 1 Setup / Usage
+## Assignment Stage 1 Setup / Usage
 See [https://github.com/BenHasNoBrain/MQ\_Stuff/tree/master/Assignment%20Stage%201](https://github.com/BenHasNoBrain/MQ_Stuff/tree/master/Assignment%20Stage%201)
